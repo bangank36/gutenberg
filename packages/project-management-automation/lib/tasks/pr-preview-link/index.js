@@ -30,11 +30,11 @@ async function prPreviewLink( payload, octokit ) {
 	const latestCommit 		= `${ repoHtmlUrl }/pull/${ pullRequestNumber }/commits/${ workflowRun.head_sha }`;
 	  
 	if ( action === 'in_progress' ) {
-        debug( `workflow_run: building in_progress` );
+        debug( `workflow_run: building in_progress...` );
     }
 
 	if ( action === 'completed' ) {
-        debug( `workflow_run: building completed` );
+        debug( `workflow_run: building completed...` );
     }
 }
 
