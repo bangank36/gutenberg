@@ -10,7 +10,6 @@ name: Pull request automation
 jobs:
     pull-request-automation:
         runs-on: ubuntu-latest
-        if: ${{ true || github.repository == 'WordPress/gutenberg' }}
         strategy:
             matrix:
                 node: ['16']
