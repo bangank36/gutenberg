@@ -18,7 +18,7 @@ const COMMENT_PLACEHOLDER = 'gutenberg-run-placeholder:cmt@v1';
 
 const createBuildSummary = async ( { buildStatus, latestCommit, pullRequestNumber, artifact }, octokit ) => {
 	let status, previewMsg, artifactMsg;
-	status = previewMsg = artifactMsg = "🚧  Building in progress...";
+	status = previewMsg = artifactMsg = "🚧  Building in progress....";
 	if (buildStatus === "success") {
 		status = "✅  Build successful!";
 		previewMsg = `🔗 [gutenberg.run/${ pullRequestNumber }](gutenberg.run/${ pullRequestNumber })`;
