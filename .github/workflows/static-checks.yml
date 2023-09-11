@@ -41,7 +41,7 @@ jobs:
 
             - name: Rebuild docs manifest
               run: |
-                npm run build:docs
+                npm run docs:build
                 git add docs/manifest.json
                 git commit -m "Update docs manifest"
                 git push origin ${{ github.head_ref }}
