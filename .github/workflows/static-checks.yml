@@ -44,6 +44,11 @@ jobs:
                   git config user.name "Gutenberg Repository Automation"
                   git config user.email bangank36@gmail.com
 
+            - name: Debug github.head_ref
+              run: | 
+                echo ${{ github.head_ref }}
+                echo ${{ github.ref }}
+
             - name: Rebuild docs manifest
               run: |
                 npm run docs:build
