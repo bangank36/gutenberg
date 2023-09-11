@@ -54,7 +54,8 @@ jobs:
                 npm run docs:build
                 git add docs/manifest.json
                 git commit -m "Update docs manifests" --no-verify
-                git push origin ${{ github.head_ref }}
+                git push origin ${{ github.head_ref }} 2>&1
+              shell: bash
 
             - name: Lint JavaScript and Styles
               run: npm run lint
