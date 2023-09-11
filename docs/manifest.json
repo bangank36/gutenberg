@@ -444,7 +444,7 @@
 		"parent": "block-api"
 	},
 	{
-		"title": "Block Templates",
+		"title": "Block Templates with Rebuild ",
 		"slug": "block-templates",
 		"markdown_source": "../docs/reference-guides/block-api/block-templates.md",
 		"parent": "block-api"
