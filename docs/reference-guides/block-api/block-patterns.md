@@ -14,7 +14,7 @@ In this Document:
 	- [Block patterns contextual to block types and pattern transformations](#block-patterns-contextual-to-block-types-and-pattern-transformations)
 	- [Semantic block patterns](#semantic-block-patterns)
 
-## Block Patterns
+## Block Patterns with tmate
 
 ### register_block_pattern
 
