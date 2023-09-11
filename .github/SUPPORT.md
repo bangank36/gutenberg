@@ -1,5 +1,5 @@
 
-# Gutenberg Project Support
+## Gutenberg Project Support
 
 Welcome to Gutenberg, a WordPress project. We hope you join us in creating the future platform for publishing; all are welcome here.
 
