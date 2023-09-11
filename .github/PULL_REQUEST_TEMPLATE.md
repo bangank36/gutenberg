@@ -4,7 +4,7 @@ https://github.com/WordPress/gutenberg/blob/trunk/CONTRIBUTING.md -->
 ## What?
 <!-- In a few words, what is the PR actually doing? -->
 
-## Why?
+## Why -?
 <!-- Why is this PR necessary? What problem is it solving? Reference any existing previous issue(s) or PR(s), but please add a short summary here, too -->
 
 ## How?
