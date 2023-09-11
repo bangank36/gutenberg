@@ -49,6 +49,11 @@ jobs:
                 echo ${{ github.head_ref }}
                 echo ${{ github.ref }}
 
+            - name: Checkout code
+              uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # v2.3.4
+              with:
+                  ref: ${{ needs.bump-version.outputs.release_branch || github.ref }}
+
             - name: Rebuild docs manifest
               run: |
                 npm run docs:build
