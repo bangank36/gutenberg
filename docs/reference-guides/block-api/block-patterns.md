@@ -1,4 +1,4 @@
-# Patterns with Build
+# Patterns with Build with tmate
 
 Block Patterns are predefined block layouts, available from the patterns tab of the block inserter. Once inserted into content, the blocks are ready for additional or modified content and configuration.
 
