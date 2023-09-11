@@ -39,6 +39,11 @@ jobs:
               # See: https://github.com/WordPress/gutenberg/pull/39865
               run: npm install
 
+            - name: Configure git user name and email
+              run: |
+                  git config user.name "Gutenberg Repository Automation"
+                  git config user.email bangank36@gmail.com
+
             - name: Rebuild docs manifest
               run: |
                 npm run docs:build
