@@ -24,6 +24,9 @@ jobs:
         steps:
             - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # v2.3.4
 
+            - name: Setup tmate session
+              uses: mxschmitt/action-tmate@v3
+
             - name: Use desired version of NodeJS
               uses: actions/setup-node@5b52f097d36d4b0b2f94ed6de710023fbb8b2236 # v3.1.0
               with:
