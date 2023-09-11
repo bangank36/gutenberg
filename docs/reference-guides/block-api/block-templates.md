@@ -1,17 +1,17 @@
-# Block Templates
+# Block Templates with Rebuild 
 
-A block template is defined as a list of block items. Such blocks can have predefined attributes, placeholder content, and be static or dynamic. Block templates allow specifying a default initial state for an editor session. 
+A block template is defined as a list of block items. Such blocks can have predefined attributes, placeholder content, and be static or dynamic. Block templates allow specifying a default initial state for an editor session.
 
 The scope of templates include:
 
--   Setting a default state dynamically on the client. (like `defaultBlock`)
--   Registered as a default for a given post type.
+- Setting a default state dynamically on the client. (like `defaultBlock`)
+- Registered as a default for a given post type.
 
 Planned additions:
 
--   Saved and assigned to pages as "page templates".
--   Defined in a `template.php` file or pulled from a custom post type (`wp_templates`) that is site specific.
--   As the equivalent of the theme hierarchy.
+- Saved and assigned to pages as "page templates".
+- Defined in a `template.php` file or pulled from a custom post type (`wp_templates`) that is site specific.
+- As the equivalent of the theme hierarchy.
 
 ## API
 
@@ -115,9 +115,9 @@ add_action( 'init', 'myplugin_register_template' );
 
 _Options:_
 
--   `contentOnly` — prevents all operations. Additionally, the block types that don't have content are hidden from the list view and can't gain focus within the block list. Unlike the other lock types, this is not overrideable by children.
--   `all` — prevents all operations. It is not possible to insert new blocks, move existing blocks, or delete blocks.
--   `insert` — prevents inserting or removing blocks, but allows moving existing blocks.
+- `contentOnly` — prevents all operations. Additionally, the block types that don't have content are hidden from the list view and can't gain focus within the block list. Unlike the other lock types, this is not overrideable by children.
+- `all` — prevents all operations. It is not possible to insert new blocks, move existing blocks, or delete blocks.
+- `insert` — prevents inserting or removing blocks, but allows moving existing blocks.
 
 Lock settings can be inherited by InnerBlocks. If `templateLock` is not set in an InnerBlocks area, the locking of the parent InnerBlocks area is used. If the block is a top level block, the locking configuration of the current post type is used.
 
@@ -134,9 +134,11 @@ attributes: {
   }
 }
 ```
+
 _Options:_
--   `remove` — Locks the ability of a block from being removed.
--   `move` — Locks the ability of a block from being moved.
+
+- `remove` — Locks the ability of a block from being removed.
+- `move` — Locks the ability of a block from being moved.
 
 You can use this with `templateLock` to lock all blocks except a single block by using `false` in `remove` or `move`.
 
