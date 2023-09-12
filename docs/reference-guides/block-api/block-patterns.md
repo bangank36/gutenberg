@@ -16,7 +16,7 @@ In this Document:
 
 ## Block Patterns with tmate
 
-### register_block_pattern
+### register_block_pattern of tmate
 
 The editor comes with several core block patterns. Theme and plugin authors can register additional custom block patterns using the `register_block_pattern` helper function.
 
