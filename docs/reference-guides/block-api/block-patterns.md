@@ -1,4 +1,4 @@
-# Patterns with tmate take 2
+# Patterns with tmate take 3
 
 Block Patterns are predefined block layouts, available from the patterns tab of the block inserter. Once inserted into content, the blocks are ready for additional or modified content and configuration.
 
