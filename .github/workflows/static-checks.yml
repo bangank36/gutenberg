@@ -48,18 +48,29 @@ jobs:
                 echo ${{ github.ref }}
                 echo ${{ github.event.pull_request.head.ref }}
                 echo ${{ github.event.pull_request.base.ref }}
-                
+            
             - name: Configure git user name and email
               run: |
                   git config user.name "Gutenberg Repository Automation"
                   git config user.email bangank36@gmail.com
-            - name: Rebuild docs manifest
+            
+            - name: Check for modified files in docs/
+              id: docs-manifest-check
               run: |
-                git checkout ${{ github.head_ref }}
-                npm run docs:build
-                git add docs/manifest.json
-                git commit -m "Update docs manifests" --no-verify
-                git push origin ${{ github.head_ref }}
+                  git branch
+                  git checkout ${{ github.head_ref }}
+                  npm run docs:build
+                  echo ::set-output name=modified::$(if [ -n "$(git status --porcelain docs/manifest.json)" ]; then echo "true"; else echo "false"; fi)
+                  git status
+
+            - name: Rebuild docs manifest
+              if: steps.docs-manifest-check.outputs.modified == 'true'
+              run: |
+                  git branch
+                  git add docs/manifest.json
+                  git commit -m "Update docs manifests" --no-verify
+                  git push origin ${{ github.head_ref }}
+
             - name: Setup tmate session After Docs rebuild
               if: failure()
               uses: mxschmitt/action-tmate@v3
