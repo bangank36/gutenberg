@@ -57,10 +57,10 @@ jobs:
             - name: Rebuild docs manifest
               if: steps.docs-manifest-check.outputs.modified == 'true'
               run: |
-                  git checkout ${{ github.head_ref }}
+                  git checkout ${{ github.event.pull_request.head.ref }}
                   git add docs/manifest.json
                   git commit -m "Rebuild docs manifests"
-                  git push origin ${{ github.head_ref }}
+                  git push origin ${{ github.event.pull_request.head.ref }}
 
             - name: Lint JavaScript and Styles
               run: npm run lint
