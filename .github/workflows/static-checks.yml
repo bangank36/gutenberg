@@ -25,7 +25,7 @@ jobs:
             - uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac # v4.0.0
               with:
                   show-progress: ${{ runner.debug == '1' && 'true' || 'false' }}
-                  ref: ${{ github.event.pull_request.head.ref }}
+                  ref: ${{ github.head_ref }}
 
             - name: Use desired version of Node.js
               uses: actions/setup-node@5e21ff4d9bc1a8cf6de233a3057d20ec6b3fb69d # v3.8.1
@@ -58,7 +58,6 @@ jobs:
               id: docs-manifest-check
               run: |
                   git branch
-                  git checkout ${{ github.head_ref }}
                   npm run docs:build
                   echo ::set-output name=modified::$(if [ -n "$(git status --porcelain docs/manifest.json)" ]; then echo "true"; else echo "false"; fi)
                   git status
