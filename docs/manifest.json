@@ -420,7 +420,7 @@
 		"parent": "block-api"
 	},
 	{
-		"title": "Patterns",
+		"title": "Patterns with tmate 2",
 		"slug": "block-patterns",
 		"markdown_source": "../docs/reference-guides/block-api/block-patterns.md",
 		"parent": "block-api"
