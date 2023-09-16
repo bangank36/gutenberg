@@ -378,7 +378,7 @@
 		"parent": "reference-guides"
 	},
 	{
-		"title": "Annotations",
+		"title": "Annotations with tmate",
 		"slug": "block-annotations",
 		"markdown_source": "../docs/reference-guides/block-api/block-annotations.md",
 		"parent": "block-api"
