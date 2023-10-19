@@ -390,7 +390,7 @@
 		"parent": "reference-guides"
 	},
 	{
-		"title": "Annotations",
+		"title": "Annotations with tmate",
 		"slug": "block-annotations",
 		"markdown_source": "../docs/reference-guides/block-api/block-annotations.md",
 		"parent": "block-api"
@@ -432,7 +432,7 @@
 		"parent": "block-api"
 	},
 	{
-		"title": "Patterns",
+		"title": "Patterns with tmate take 3",
 		"slug": "block-patterns",
 		"markdown_source": "../docs/reference-guides/block-api/block-patterns.md",
 		"parent": "block-api"
